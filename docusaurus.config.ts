@@ -37,6 +37,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          docItemComponent: "@theme/ApiItem", // Az API elemek komponensei, add hozzá ezt a sort
+
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -64,6 +66,28 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'openapi', // A plugin egyedi azonosítója
+        docsPluginId: 'classic',
+        config: {
+          petstore: {  // Egyedi azonosító az API doksinak
+            specPath: 'openapi/petstore-api.yaml', // Az OpenAPI fájl elérési útja
+            outputDir: 'docs/petstore', // A generált Markdown fájlok helye
+            sidebarOptions: {
+              groupPathsBy: 'tag',  // Csoportosítás tagek alapján az oldalsávban
+            },
+            // További opciók a plugin dokumentációja szerint
+          },
+        }
+      }
+    ]
+  ],
+
+  themes: ['docusaurus-theme-openapi-docs'],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -83,6 +107,12 @@ const config: Config = {
           to: '/docs/guides/intro',
           position: 'left',
           label: 'Guides',
+        },
+        {
+          to: '/docs/petstore/swagger-petstore',
+          sidebarId: 'petstoreSidebar',
+          position: 'left',
+          label: 'Petstore API',
         },
         {
           href: 'https://github.com/facebook/docusaurus',
