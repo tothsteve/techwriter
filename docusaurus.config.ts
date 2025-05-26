@@ -115,7 +115,7 @@ const config: Config = {
           label: 'Petstore API',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/tothsteve/techwriter/',
           label: 'GitHub',
           position: 'right',
         },
@@ -142,11 +142,7 @@ const config: Config = {
             },
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              href: 'https://discord.gg/3r6HnhSn',
             },
           ],
         },
