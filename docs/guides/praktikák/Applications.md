@@ -31,7 +31,7 @@ Amikor elengeded (formázatlanul) beszúrja a kiválasztott elemet.
 ![ShortcutHistory](../img/ShortcutHistory.png)
 ![FlyCut](../img/Screenshot2025-05-25at20.10.33.png)
 
-## Filemanager
+## Terminal
 
 https://www.warp.dev
 
